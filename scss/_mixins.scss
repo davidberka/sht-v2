@@ -1,0 +1,174 @@
+@mixin section-spaceAround {
+    padding: 1.9rem 1rem;
+}
+
+@mixin button {
+    font-weight: 700; 
+    padding: .5rem 1.5rem;
+    border-radius: 33px;
+
+    &.transparent {
+        background: transparent;
+        color: $white;
+        border: 1px solid $white;
+    }
+
+    &.white {
+        background: $white;
+        color: $black;
+        border: 1px solid $white;
+    }
+
+    &.red {
+        background: transparent;
+        color: $red;
+        border: 1px solid $red;
+    }
+}
+
+@mixin blob {
+    border-radius: 50% 50% 50% 50% / 78% 60% 40% 22%;
+}
+
+@mixin about-card {
+    padding: 2.5rem;
+    border-radius: 25px;
+    box-shadow: 0px 0px 60px rgba(#000000, .05);
+    width: 100%;
+
+    .header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+
+        .header_icon {
+            height: 3rem;
+            min-width: 3rem;
+            width: 3rem;
+            display: grid;
+            place-items: center;
+
+            @include blob;
+
+            &.red {
+                background: $red;
+            }
+            
+            &.blue {
+                background: $blue;
+            }
+        }
+
+        h2 {
+            word-spacing: 9999px;
+            font-weight: 700;
+
+            &.red {
+                color: $red;
+            }
+
+            &.blue {
+                color: $blue;
+            }
+        }
+    }
+
+    ul {
+        &.red li::before {
+            background: $red;
+        }
+
+        &.blue li::before {
+            background: $blue;
+        }
+
+        li {
+            font-weight: 700;
+            position: relative;
+            padding-left: 1rem;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 6px;
+                width: 3px;
+            }
+        }   
+    }
+}
+
+@mixin coach-card {
+    text-align: center;
+    padding: 0 2rem;
+
+    img {
+        height: 100px;
+        width: 100px;
+        aspect-ratio: 1 / 1;
+        margin-bottom: 1rem;
+
+        @include blob;
+    }
+
+    span {
+        color: $red;
+    }
+}
+
+@mixin article {
+    position: relative;
+    max-width: 272px;
+
+    .article_img {
+        position: relative;
+        padding: 1rem 0;
+        margin-bottom: 1rem;
+
+        img {
+            position: relative;
+            border-radius: 10px;
+            z-index: 1;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0rem;
+            right: -1rem;
+            height: 164px;
+            width: 146px;
+            background: $red;
+            opacity: .12;
+
+            @include blob;
+        }
+
+        &::after {
+            content: "";
+            bottom: 0rem;
+            left: -1rem;
+            position: absolute;
+            height: 164px;
+            width: 146px;
+            background: $blue;
+            opacity: .12;
+
+            @include blob;
+        }
+    }
+    
+    .article_content {
+        h3 {
+            line-height: 1.2;
+            margin-bottom: .5rem;
+        }
+
+        span {
+            color: $red;
+        }
+    }
+}
