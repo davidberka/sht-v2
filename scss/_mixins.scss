@@ -31,6 +31,8 @@
 }
 
 @mixin about-card {
+    display: flex;
+    flex-direction: column-reverse;
     padding: 2.5rem;
     border-radius: 25px;
     box-shadow: 0px 0px 60px rgba(#000000, .05);
@@ -99,6 +101,45 @@
             }
         }   
     }
+
+    .about_card_img {
+        position: relative;
+        padding: 0 1rem 1rem 1rem;
+        max-width: 210px;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+
+        img {
+            position: relative;
+            z-index: 1;
+            border-radius: 10px;
+            box-shadow: 0px 0px 70px rgba(#000000, .2);
+        }
+
+        &.red::after {
+            background: $red;
+        }
+
+        &.blue::after {
+            background: $blue;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            transform: translateX(1rem);
+            height: 164px;
+            width: 146px;
+
+            @include blob;
+        }
+    }
+
+    @media (min-width: 768px) {
+        flex: .5;
+    }
 }
 
 @mixin coach-card {
@@ -108,7 +149,6 @@
     img {
         height: 100px;
         width: 100px;
-        aspect-ratio: 1 / 1;
         margin-bottom: 1rem;
 
         @include blob;

@@ -74,6 +74,7 @@ img {
   inset: 0;
   width: 100%;
   height: 100%;
+  z-index: 20;
 }
 
 header {
@@ -136,6 +137,8 @@ footer {
 }
 
 .footer_bg {
+  height: 100%;
+  width: 100%;
   position: absolute;
   inset: 0;
   object-fit: cover;
@@ -182,6 +185,8 @@ footer {
 
 .hero_section_container {
   padding: 1.9rem 1rem;
+  display: flex;
+  flex-direction: column-reverse;
   padding-top: 2.8rem;
   color: #FFFFFF;
   background: #E3000F;
@@ -202,7 +207,13 @@ footer {
   gap: 1rem;
 }
 
+.hero_img {
+  margin-bottom: 2rem;
+}
+
 .banner_section {
+  display: flex;
+  justify-content: center;
   padding: 1.9rem 1rem;
 }
 .banner_section a img {
@@ -218,6 +229,8 @@ footer {
 }
 
 .about_card {
+  display: flex;
+  flex-direction: column-reverse;
   padding: 2.5rem;
   border-radius: 25px;
   box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.05);
@@ -273,6 +286,40 @@ footer {
   height: 6px;
   width: 3px;
 }
+.about_card .about_card_img {
+  position: relative;
+  padding: 0 1rem 1rem 1rem;
+  max-width: 210px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+.about_card .about_card_img img {
+  position: relative;
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.2);
+}
+.about_card .about_card_img.red::after {
+  background: #E3000F;
+}
+.about_card .about_card_img.blue::after {
+  background: #1E2A4F;
+}
+.about_card .about_card_img::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translateX(1rem);
+  height: 164px;
+  width: 146px;
+  border-radius: 50% 50% 50% 50%/78% 60% 40% 22%;
+}
+@media (min-width: 768px) {
+  .about_card {
+    flex: 0.5;
+  }
+}
 
 .coaches_section_container {
   padding: 1.9rem 1rem;
@@ -293,7 +340,6 @@ footer {
 .coaches_item img {
   height: 100px;
   width: 100px;
-  aspect-ratio: 1/1;
   margin-bottom: 1rem;
   border-radius: 50% 50% 50% 50%/78% 60% 40% 22%;
 }
@@ -375,6 +421,12 @@ footer {
 
 .partner_content h2 {
   margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .about_section {
+    display: flex;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
