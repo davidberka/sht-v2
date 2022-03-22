@@ -1,0 +1,102 @@
+.article_page_section_container {
+    @include section-spaceAround;
+}
+
+.article_page_main_img {
+    margin-bottom: 2rem;
+    
+    img {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+        display: block;
+        border-radius: 20px;
+        box-shadow: 0px 0px 70px rgba(#000000, .05);
+    }
+}
+
+.article_page_content {
+    margin-bottom: 2rem;
+
+    h1 {
+        font-weight: 700;
+        color: $red;
+        margin-bottom: 1rem;
+    }
+
+    span {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+    }
+
+    h4 {
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+}
+
+.article_page_content_footer {
+    padding-top: 1rem;
+    border-top: 1px solid rgba($color: $red, $alpha: .15);
+    display: flex;
+    align-items: center;
+
+    .icons {
+        display: flex;
+        gap: .25rem;
+        margin-right: .5rem;
+    }
+
+    span {
+        text-transform: uppercase;
+        font-size: .75rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .article_page_section_container {
+        width: 80%;
+        margin-inline: auto;
+    }
+    .article_page_main_img {
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: -4rem;
+            right: -1rem;
+            height: 25vw;
+            width: 20vw;
+            max-height: 400px;
+            max-width: 356px;
+            background: $blue;
+            opacity: .12;
+            transform: rotate(-90deg);
+
+            @include blob;
+        }
+
+        &::after {
+            content: "";
+            bottom: -1rem;
+            left: -4rem;
+            position: absolute;
+            height: 25vw;
+            width: 20vw;
+            max-height: 400px;
+            max-width: 356px;
+            background: $red;
+            opacity: .12;
+
+            @include blob;
+        }
+    }
+
+    .article_page_content, .article_page_content_footer {
+        padding-inline: 2rem;
+    }
+}
