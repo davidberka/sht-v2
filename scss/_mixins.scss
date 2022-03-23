@@ -1,5 +1,14 @@
 @mixin section-spaceAround {
     padding: 1.9rem 1rem;
+
+    @media (min-width: 1024px) {
+        width: 90%;
+        margin-inline: auto;
+    }
+
+    @media (min-width: 1280px) {
+        width: 85%;
+    }
 }
 
 @mixin button {

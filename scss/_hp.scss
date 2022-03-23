@@ -97,12 +97,14 @@
     @include section-spaceAround;
     
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2rem;
 
     img {
         margin-inline: auto;
-        margin-bottom: 2rem;
         object-fit: cover;
+        height: 275px;
+        width: auto;
     }
 }
 
@@ -115,5 +117,17 @@
 @media (min-width: 768px) {
     .about_section {
         display: flex;
+    }
+    
+    .partner_section_container {
+        flex-direction: row;
+        align-items: center;
+        gap: 4rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .partner_section_container {
+        padding-inline: 6rem;
     }
 }

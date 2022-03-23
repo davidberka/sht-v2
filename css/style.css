@@ -82,6 +82,19 @@ img {
   z-index: 20;
 }
 
+@media (min-width: 1440px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+}
 header {
   height: 5rem;
   display: flex;
@@ -90,6 +103,17 @@ header {
   padding: 1.9rem 1rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+@media (min-width: 1024px) {
+  header {
+    width: 90%;
+    margin-inline: auto;
+  }
+}
+@media (min-width: 1280px) {
+  header {
+    width: 85%;
+  }
 }
 
 .header_logo_container {
@@ -140,6 +164,17 @@ footer {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+@media (min-width: 1024px) {
+  footer {
+    width: 90%;
+    margin-inline: auto;
+  }
+}
+@media (min-width: 1280px) {
+  footer {
+    width: 85%;
+  }
+}
 
 .footer_bg {
   height: 100%;
@@ -188,6 +223,11 @@ footer {
   object-fit: contain;
 }
 
+@media (min-width: 768px) {
+  .footer_col1 {
+    margin-bottom: 0;
+  }
+}
 .hero_section_container {
   padding: 1.9rem 1rem;
   display: flex;
@@ -195,6 +235,17 @@ footer {
   padding-top: 2.8rem;
   color: #FFFFFF;
   background: #E3000F;
+}
+@media (min-width: 1024px) {
+  .hero_section_container {
+    width: 90%;
+    margin-inline: auto;
+  }
+}
+@media (min-width: 1280px) {
+  .hero_section_container {
+    width: 85%;
+  }
 }
 
 .hero_content h1 {
@@ -221,6 +272,17 @@ footer {
   justify-content: center;
   padding: 1.9rem 1rem;
 }
+@media (min-width: 1024px) {
+  .banner_section {
+    width: 90%;
+    margin-inline: auto;
+  }
+}
+@media (min-width: 1280px) {
+  .banner_section {
+    width: 85%;
+  }
+}
 .banner_section a img {
   aspect-ratio: 5/1;
   max-height: 100px;
@@ -231,6 +293,17 @@ footer {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+}
+@media (min-width: 1024px) {
+  .about_section {
+    width: 90%;
+    margin-inline: auto;
+  }
+}
+@media (min-width: 1280px) {
+  .about_section {
+    width: 85%;
+  }
 }
 
 .about_card {
@@ -329,6 +402,17 @@ footer {
 .coaches_section_container {
   padding: 1.9rem 1rem;
 }
+@media (min-width: 1024px) {
+  .coaches_section_container {
+    width: 90%;
+    margin-inline: auto;
+  }
+}
+@media (min-width: 1280px) {
+  .coaches_section_container {
+    width: 85%;
+  }
+}
 
 .coaches_container {
   display: flex;
@@ -354,6 +438,17 @@ footer {
 
 .articles_section {
   padding: 1.9rem 1rem;
+}
+@media (min-width: 1024px) {
+  .articles_section {
+    width: 90%;
+    margin-inline: auto;
+  }
+}
+@media (min-width: 1280px) {
+  .articles_section {
+    width: 85%;
+  }
 }
 
 .articles_container {
@@ -416,12 +511,25 @@ footer {
 .partner_section_container {
   padding: 1.9rem 1rem;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media (min-width: 1024px) {
+  .partner_section_container {
+    width: 90%;
+    margin-inline: auto;
+  }
+}
+@media (min-width: 1280px) {
+  .partner_section_container {
+    width: 85%;
+  }
 }
 .partner_section_container img {
   margin-inline: auto;
-  margin-bottom: 2rem;
   object-fit: cover;
+  height: 275px;
+  width: auto;
 }
 
 .partner_content h2 {
@@ -432,9 +540,31 @@ footer {
   .about_section {
     display: flex;
   }
+
+  .partner_section_container {
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+  }
+}
+@media (min-width: 1280px) {
+  .partner_section_container {
+    padding-inline: 6rem;
+  }
 }
 .article_page_section_container {
   padding: 1.9rem 1rem;
+}
+@media (min-width: 1024px) {
+  .article_page_section_container {
+    width: 90%;
+    margin-inline: auto;
+  }
+}
+@media (min-width: 1280px) {
+  .article_page_section_container {
+    width: 85%;
+  }
 }
 
 .article_page_main_img {
@@ -524,6 +654,15 @@ footer {
 
   .article_page_content, .article_page_content_footer {
     padding-inline: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .article_page_section_container {
+    width: 70%;
+  }
+
+  .article_page_content, .article_page_content_footer {
+    padding-inline: 3rem;
   }
 }
 
