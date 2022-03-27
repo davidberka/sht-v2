@@ -280,6 +280,23 @@ nav .social_icons {
   .header_logo_container {
     width: 12.75rem;
   }
+
+  .nav_links {
+    gap: 2rem;
+  }
+  .nav_links li:not(:first-child) {
+    position: relative;
+  }
+  .nav_links li:not(:first-child)::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -1rem;
+    transform: translateY(-50%);
+    height: 6px;
+    width: 3px;
+    background: rgba(227, 0, 15, 0.2);
+  }
 }
 footer {
   padding: 1.9rem 1rem;
@@ -359,6 +376,10 @@ footer {
   .footer_col1 {
     margin-bottom: 0;
   }
+
+  .footer_bg {
+    object-fit: contain;
+  }
 }
 .hero_section {
   background: #E3000F;
@@ -405,7 +426,27 @@ footer {
 }
 
 .hero_img {
+  position: relative;
   margin-bottom: 2rem;
+  max-width: 400px;
+  margin-inline: auto;
+}
+.hero_img .static_img {
+  display: block;
+  aspect-ratio: 380/400;
+  width: 40%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: 1px solid yellow;
+}
+.hero_img .video img {
+  display: block;
+  aspect-ratio: 608/522;
+  width: 100%;
+  height: auto;
+  border-radius: 68% 32% 23% 77%/54% 52% 48% 46%;
 }
 
 .banner_section {
@@ -776,21 +817,59 @@ footer {
     align-items: center;
     gap: 4rem;
   }
+
+  .hero_img {
+    max-width: unset;
+    width: 50%;
+  }
 }
 @media (min-width: 1024px) {
   .coaches_container, .articles_container {
     flex-wrap: nowrap;
     justify-content: space-between;
   }
+
+  .hero_section_container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .hero_content {
+    flex: 0.5;
+  }
+
+  .hero_img {
+    margin-bottom: 0;
+    flex: 0.5;
+  }
 }
 @media (min-width: 1280px) {
   .partner_section_container {
     padding-inline: 6rem;
   }
+
+  .banner_section a img {
+    aspect-ratio: 7/1;
+  }
+}
+@media (min-width: 1440px) {
+  .hero_section_container {
+    gap: 4rem;
+  }
+
+  .hero_content h1 {
+    margin-bottom: 1.5rem;
+  }
+  .hero_content h2 {
+    margin-bottom: 3rem;
+  }
 }
 .article_page_section_container {
   padding: 1.9rem 1rem;
   max-width: 1310px;
+  max-width: 1088px;
 }
 @media (min-width: 1024px) {
   .article_page_section_container {
@@ -816,6 +895,7 @@ footer {
   position: relative;
   z-index: 1;
   width: 100%;
+  margin-inline: auto;
   height: auto;
   aspect-ratio: 16/9;
   display: block;

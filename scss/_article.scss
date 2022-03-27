@@ -1,5 +1,7 @@
 .article_page_section_container {
     @include section-spaceAround;
+
+    max-width: 1088px;
 }
 
 .article_page_main_img {
@@ -9,6 +11,7 @@
         position: relative;
         z-index: 1;
         width: 100%;
+        margin-inline: auto;
         height: auto;
         aspect-ratio: 16/9;
         display: block;
