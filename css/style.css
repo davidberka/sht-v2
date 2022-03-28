@@ -382,7 +382,9 @@ footer {
   }
 }
 .hero_section {
-  background: #E3000F;
+  background-image: url("../img/top_story_bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hero_section_container {
@@ -391,6 +393,7 @@ footer {
   display: flex;
   flex-direction: column-reverse;
   padding-top: 2.8rem;
+  padding-bottom: 3.5rem;
   color: #FFFFFF;
 }
 @media (min-width: 1024px) {
@@ -619,6 +622,12 @@ footer {
   }
 }
 
+.coaches_section {
+  background-image: url("../img/coaches_bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .coaches_section_container {
   padding: 1.9rem 1rem;
   max-width: 1310px;
@@ -829,6 +838,10 @@ footer {
     justify-content: space-between;
   }
 
+  .hero_section, .coaches_section {
+    background-size: 100% 100%;
+  }
+
   .hero_section_container {
     flex-direction: row;
     align-items: center;
@@ -857,6 +870,27 @@ footer {
 @media (min-width: 1440px) {
   .hero_section_container {
     gap: 4rem;
+    padding: 5rem 0 0 0;
+  }
+
+  .banner_section {
+    padding: 2rem 0 0 0;
+  }
+
+  .about_section {
+    padding: 3.5rem 0;
+  }
+
+  .coaches_section_container {
+    padding: 7rem 0 5rem 0;
+  }
+
+  .articles_section {
+    padding: 5rem 0;
+  }
+
+  .partner_section_container {
+    padding: 5rem 6rem;
   }
 
   .hero_content h1 {
@@ -866,6 +900,12 @@ footer {
     margin-bottom: 3rem;
   }
 }
+.article_page_section {
+  background-image: url("../img/top_story_bg.png");
+  background-size: 100% clamp(175px, 35vw, 525px);
+  background-repeat: no-repeat;
+}
+
 .article_page_section_container {
   padding: 1.9rem 1rem;
   max-width: 1310px;

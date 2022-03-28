@@ -1,5 +1,7 @@
 .hero_section {
-    background: $red;
+    background-image: url('../img/top_story_bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .hero_section_container {
@@ -8,6 +10,7 @@
     display: flex;
     flex-direction: column-reverse;
     padding-top: 2.8rem;
+    padding-bottom: 3.5rem;
     color: $white;
 }
 
@@ -81,6 +84,12 @@
 
 .about_card {
     @include about-card;
+}
+
+.coaches_section {
+    background-image: url('../img/coaches_bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .coaches_section_container {
@@ -178,6 +187,10 @@
         justify-content: space-between;
     }
 
+    .hero_section, .coaches_section {
+        background-size: 100% 100%;
+    }
+
     .hero_section_container {
         flex-direction: row;
         align-items: center;
@@ -208,6 +221,27 @@
 @media (min-width: 1440px) {
     .hero_section_container {
         gap: 4rem;
+        padding: 5rem 0 0 0;
+    }
+
+    .banner_section {
+        padding: 2rem 0 0 0;
+    }
+
+    .about_section {
+        padding: 3.5rem 0;
+    }
+
+    .coaches_section_container {
+        padding: 7rem 0 5rem 0;
+    }
+
+    .articles_section {
+        padding: 5rem 0;
+    }
+
+    .partner_section_container {
+        padding: 5rem 6rem;
     }
 
     .hero_content {

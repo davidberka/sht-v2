@@ -1,3 +1,9 @@
+.article_page_section {
+    background-image: url('../img/top_story_bg.png');
+    background-size: 100% clamp(175px, 35vw, 525px); 
+    background-repeat: no-repeat;
+}
+
 .article_page_section_container {
     @include section-spaceAround;
 
