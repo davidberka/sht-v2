@@ -43,7 +43,7 @@
         aspect-ratio: 380/400;
         width: 40%;
         height: auto;
-        position: absolute; 
+        position: absolute;
         bottom: 0;
         left: 0;
         border: 1px solid yellow;
@@ -59,7 +59,7 @@
         }
     }
 }
- 
+
 .banner_section {
     display: flex;
     justify-content: center;
@@ -94,6 +94,8 @@
 
 .coaches_section_container {
     @include section-spaceAround;
+
+    padding: 7rem 1rem 5rem 1rem;
 
     .primary_btn {
         display: flex;
@@ -145,7 +147,8 @@
 
 .partner_section_container {
     @include section-spaceAround;
-    
+
+    max-width: 1050px;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -168,7 +171,7 @@
     .about_section {
         display: flex;
     }
-    
+
     .partner_section_container {
         flex-direction: row;
         align-items: center;
@@ -182,12 +185,15 @@
 }
 
 @media (min-width: 1024px) {
-    .coaches_container, .articles_container {
+
+    .coaches_container,
+    .articles_container {
         flex-wrap: nowrap;
         justify-content: space-between;
     }
 
-    .hero_section, .coaches_section {
+    .hero_section,
+    .coaches_section {
         background-size: 100% 100%;
     }
 
@@ -209,10 +215,6 @@
 }
 
 @media (min-width: 1280px) {
-    .partner_section_container {
-        padding-inline: 6rem;
-    }
-
     .banner_section a img {
         aspect-ratio: 7/1;
     }
@@ -241,7 +243,11 @@
     }
 
     .partner_section_container {
-        padding: 5rem 6rem;
+        padding: 5rem 0;
+
+        img {
+            height: 333px;
+        }
     }
 
     .hero_content {

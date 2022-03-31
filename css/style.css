@@ -339,9 +339,16 @@ footer {
   flex-wrap: wrap;
   gap: 1.5rem;
   margin-bottom: 1rem;
+  z-index: 2;
 }
 .footer_col1 > div p {
   font-weight: 700;
+}
+.footer_col1 > div p a {
+  color: #000000;
+}
+.footer_col1 > div p a:hover {
+  text-decoration: underline;
 }
 .footer_col1 > div span {
   color: #E3000F;
@@ -352,6 +359,7 @@ footer {
 }
 
 .footer_col2 {
+  z-index: 2;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -631,6 +639,7 @@ footer {
 .coaches_section_container {
   padding: 1.9rem 1rem;
   max-width: 1310px;
+  padding: 7rem 1rem 5rem 1rem;
 }
 @media (min-width: 1024px) {
   .coaches_section_container {
@@ -785,6 +794,7 @@ footer {
 .partner_section_container {
   padding: 1.9rem 1rem;
   max-width: 1310px;
+  max-width: 1050px;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -833,12 +843,14 @@ footer {
   }
 }
 @media (min-width: 1024px) {
-  .coaches_container, .articles_container {
+  .coaches_container,
+.articles_container {
     flex-wrap: nowrap;
     justify-content: space-between;
   }
 
-  .hero_section, .coaches_section {
+  .hero_section,
+.coaches_section {
     background-size: 100% 100%;
   }
 
@@ -859,10 +871,6 @@ footer {
   }
 }
 @media (min-width: 1280px) {
-  .partner_section_container {
-    padding-inline: 6rem;
-  }
-
   .banner_section a img {
     aspect-ratio: 7/1;
   }
@@ -890,7 +898,10 @@ footer {
   }
 
   .partner_section_container {
-    padding: 5rem 6rem;
+    padding: 5rem 0;
+  }
+  .partner_section_container img {
+    height: 333px;
   }
 
   .hero_content h1 {
