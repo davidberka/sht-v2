@@ -4,7 +4,7 @@
 
     @media (min-width: 1024px) {
         width: 90%;
-        margin-inline: auto;
+        margin: 0 auto;
     }
 
     @media (min-width: 1280px) {
@@ -17,7 +17,7 @@
 }
 
 @mixin button {
-    font-weight: 700; 
+    font-weight: 700;
     padding: .5rem 1.5rem;
     border-radius: 33px;
     display: flex;
@@ -64,7 +64,7 @@
     }
 
     &:hover {
-        transform: scale(1.05); 
+        transform: scale(1.05);
         box-shadow: 0px 0px 60px rgba(#000000, .05);
     }
 
@@ -103,7 +103,7 @@
             &.red {
                 background: $red;
             }
-            
+
             &.blue {
                 background: $blue;
             }
@@ -146,7 +146,7 @@
                 height: 6px;
                 width: 3px;
             }
-        }   
+        }
     }
 
     .about_card_img {
@@ -228,8 +228,7 @@
         aspect-ratio: 1/1;
         height: auto;
         width: 100px;
-        margin-bottom: 1rem;
-        margin-inline: auto;
+        margin: 0 auto 1rem auto;
 
         @include blob;
     }
@@ -292,7 +291,7 @@
             @include blob;
         }
     }
-    
+
     .article_content {
         h3 {
             line-height: 1.2;

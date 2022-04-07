@@ -141,7 +141,7 @@ header {
 @media (min-width: 1024px) {
   header {
     width: 90%;
-    margin-inline: auto;
+    margin: 0 auto;
   }
 }
 @media (min-width: 1280px) {
@@ -311,7 +311,7 @@ footer {
 @media (min-width: 1024px) {
   footer {
     width: 90%;
-    margin-inline: auto;
+    margin: 0 auto;
   }
 }
 @media (min-width: 1280px) {
@@ -407,7 +407,7 @@ footer {
 @media (min-width: 1024px) {
   .hero_section_container {
     width: 90%;
-    margin-inline: auto;
+    margin: 0 auto;
   }
 }
 @media (min-width: 1280px) {
@@ -438,9 +438,8 @@ footer {
 
 .hero_img {
   position: relative;
-  margin-bottom: 2rem;
   max-width: 400px;
-  margin-inline: auto;
+  margin: 0 auto 2rem auto;
 }
 .hero_img .static_img {
   display: block;
@@ -469,7 +468,7 @@ footer {
 @media (min-width: 1024px) {
   .banner_section {
     width: 90%;
-    margin-inline: auto;
+    margin: 0 auto;
   }
 }
 @media (min-width: 1280px) {
@@ -497,7 +496,7 @@ footer {
 @media (min-width: 1024px) {
   .about_section {
     width: 90%;
-    margin-inline: auto;
+    margin: 0 auto;
   }
 }
 @media (min-width: 1280px) {
@@ -644,7 +643,7 @@ footer {
 @media (min-width: 1024px) {
   .coaches_section_container {
     width: 90%;
-    margin-inline: auto;
+    margin: 0 auto;
   }
 }
 @media (min-width: 1280px) {
@@ -682,8 +681,7 @@ footer {
   aspect-ratio: 1/1;
   height: auto;
   width: 100px;
-  margin-bottom: 1rem;
-  margin-inline: auto;
+  margin: 0 auto 1rem auto;
   border-radius: 50% 50% 50% 50%/78% 60% 40% 22%;
 }
 .coaches_item span {
@@ -702,7 +700,7 @@ footer {
 @media (min-width: 1024px) {
   .articles_section {
     width: 90%;
-    margin-inline: auto;
+    margin: 0 auto;
   }
 }
 @media (min-width: 1280px) {
@@ -802,7 +800,7 @@ footer {
 @media (min-width: 1024px) {
   .partner_section_container {
     width: 90%;
-    margin-inline: auto;
+    margin: 0 auto;
   }
 }
 @media (min-width: 1280px) {
@@ -816,7 +814,7 @@ footer {
   }
 }
 .partner_section_container img {
-  margin-inline: auto;
+  margin: 0 auto;
   object-fit: cover;
   height: 275px;
   width: auto;
@@ -925,7 +923,7 @@ footer {
 @media (min-width: 1024px) {
   .article_page_section_container {
     width: 90%;
-    margin-inline: auto;
+    margin: 0 auto;
   }
 }
 @media (min-width: 1280px) {
@@ -946,7 +944,7 @@ footer {
   position: relative;
   z-index: 1;
   width: 100%;
-  margin-inline: auto;
+  margin: 0 auto;
   height: auto;
   aspect-ratio: 16/9;
   display: block;
@@ -991,7 +989,7 @@ footer {
 @media (min-width: 768px) {
   .article_page_section_container {
     width: 80%;
-    margin-inline: auto;
+    margin: 0 auto;
   }
 
   .article_page_main_img {
@@ -1025,7 +1023,8 @@ footer {
     border-radius: 50% 50% 50% 50%/78% 60% 40% 22%;
   }
 
-  .article_page_content, .article_page_content_footer {
+  .article_page_content,
+.article_page_content_footer {
     padding-inline: 2rem;
   }
 }
@@ -1034,7 +1033,8 @@ footer {
     width: 70%;
   }
 
-  .article_page_content, .article_page_content_footer {
+  .article_page_content,
+.article_page_content_footer {
     padding-inline: 3rem;
   }
 }

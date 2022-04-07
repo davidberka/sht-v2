@@ -1,6 +1,6 @@
 .article_page_section {
     background-image: url('../img/top_story_bg.png');
-    background-size: 100% clamp(175px, 35vw, 525px); 
+    background-size: 100% clamp(175px, 35vw, 525px);
     background-repeat: no-repeat;
 }
 
@@ -12,12 +12,12 @@
 
 .article_page_main_img {
     margin-bottom: 2rem;
-    
+
     img {
         position: relative;
         z-index: 1;
         width: 100%;
-        margin-inline: auto;
+        margin: 0 auto;
         height: auto;
         aspect-ratio: 16/9;
         display: block;
@@ -68,7 +68,7 @@
 @media (min-width: 768px) {
     .article_page_section_container {
         width: 80%;
-        margin-inline: auto;
+        margin: 0 auto;
     }
 
     .article_page_main_img {
@@ -106,7 +106,8 @@
         }
     }
 
-    .article_page_content, .article_page_content_footer {
+    .article_page_content,
+    .article_page_content_footer {
         padding-inline: 2rem;
     }
 }
@@ -116,7 +117,8 @@
         width: 70%;
     }
 
-    .article_page_content, .article_page_content_footer {
+    .article_page_content,
+    .article_page_content_footer {
         padding-inline: 3rem;
     }
 }

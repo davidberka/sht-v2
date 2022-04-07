@@ -34,9 +34,8 @@
 
 .hero_img {
     position: relative;
-    margin-bottom: 2rem;
     max-width: 400px;
-    margin-inline: auto;
+    margin: 0 auto 2rem auto;
 
     .static_img {
         display: block;
@@ -154,7 +153,7 @@
     gap: 2rem;
 
     img {
-        margin-inline: auto;
+        margin: 0 auto;
         object-fit: cover;
         height: 275px;
         width: auto;
