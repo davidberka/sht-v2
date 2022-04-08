@@ -55,8 +55,15 @@
 
     .icons {
         display: flex;
-        gap: .25rem;
         margin-right: .5rem;
+
+        a {
+            max-height: 16px;
+
+            &:not(:last-child) img {
+                margin-right: .25rem;
+            }
+        }
     }
 
     span {
@@ -108,7 +115,7 @@
 
     .article_page_content,
     .article_page_content_footer {
-        padding-inline: 2rem;
+        padding: 0 2rem;
     }
 }
 
@@ -119,6 +126,6 @@
 
     .article_page_content,
     .article_page_content_footer {
-        padding-inline: 3rem;
+        padding: 0 3rem;
     }
 }

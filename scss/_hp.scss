@@ -29,7 +29,14 @@
 .hero_btns {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+
+    a {
+        &:nth-child(1) {
+            margin-right: 1rem;
+        }
+
+        margin-bottom: 1rem;
+    }
 }
 
 .hero_img {
@@ -78,7 +85,6 @@
 
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
 }
 
 .about_card {
@@ -108,7 +114,6 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2rem 0;
     margin-bottom: 3rem;
 }
 
@@ -131,7 +136,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2rem;
     margin-bottom: 3rem;
 }
 
@@ -150,10 +154,10 @@
     max-width: 1050px;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
 
     img {
         margin: 0 auto;
+        margin-bottom: 2rem;
         object-fit: cover;
         height: 275px;
         width: auto;
@@ -174,12 +178,20 @@
     .partner_section_container {
         flex-direction: row;
         align-items: center;
-        gap: 4rem;
+
+        img {
+            margin-bottom: 0;
+            margin-right: 4rem;
+        }
     }
 
     .hero_img {
         max-width: unset;
         width: 50%;
+    }
+
+    .hero_btns a {
+        margin-bottom: 0;
     }
 }
 
@@ -200,7 +212,6 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        gap: 2rem;
     }
 
     .hero_content {
@@ -208,6 +219,7 @@
     }
 
     .hero_img {
+        margin-left: 2rem;
         margin-bottom: 0;
         flex: .5;
     }
@@ -221,8 +233,11 @@
 
 @media (min-width: 1440px) {
     .hero_section_container {
-        gap: 4rem;
         padding: 5rem 0 0 0;
+    }
+
+    .hero_img {
+        margin-left: 4rem;
     }
 
     .banner_section {
