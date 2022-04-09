@@ -12,15 +12,15 @@
 
 .article_page_main_img {
     margin-bottom: 2rem;
+    position: relative;
+    padding-top: 56.25%;
 
     img {
-        position: relative;
+        position: absolute;
+        inset: 0;
         z-index: 1;
         width: 100%;
-        margin: 0 auto;
-        height: auto;
-        aspect-ratio: 16/9;
-        display: block;
+        height: 100%;
         border-radius: 20px;
         box-shadow: 0px 0px 70px rgba(#000000, .05);
     }
@@ -79,8 +79,6 @@
     }
 
     .article_page_main_img {
-        position: relative;
-
         &::before {
             content: "";
             position: absolute;

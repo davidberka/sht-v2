@@ -46,9 +46,8 @@
 
     .static_img {
         display: block;
-        aspect-ratio: 380/400;
-        width: 40%;
-        height: auto;
+        width: clamp(138px, 15vw, 270px);
+        height: clamp(144px, 17vw, 290px);
         position: absolute;
         bottom: 0;
         left: 0;
@@ -57,10 +56,8 @@
 
     .video {
         img {
-            display: block;
-            aspect-ratio: 608/522;
-            width: 100%;
-            height: auto;
+            width: clamp(310px, 35vw, 600px);
+            height: clamp(270px, 30vw, 522px);
             border-radius: 68% 32% 23% 77% / 54% 52% 48% 46%;
         }
     }
@@ -74,8 +71,8 @@
 
     a {
         img {
-            aspect-ratio: 5 / 1;
-            max-height: 100px;
+            width: clamp(280px, 60vw, 864px);
+            height: clamp(60px, 12vw, 100px);
         }
     }
 }
@@ -210,24 +207,26 @@
 
     .hero_section_container {
         flex-direction: row;
-        align-items: center;
         justify-content: space-between;
     }
 
     .hero_content {
+        margin-top: 6ch;
         flex: .5;
+
+        h1 {
+            max-width: 30ch;
+        }
+
+        h2 {
+            max-width: 27ch;
+        }
     }
 
     .hero_img {
         margin-left: 2rem;
         margin-bottom: 0;
         flex: .5;
-    }
-}
-
-@media (min-width: 1280px) {
-    .banner_section a img {
-        aspect-ratio: 7/1;
     }
 }
 
@@ -238,6 +237,10 @@
 
     .hero_img {
         margin-left: 4rem;
+
+        .static_img {
+            bottom: 1rem;
+        }
     }
 
     .banner_section {

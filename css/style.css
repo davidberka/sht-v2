@@ -460,19 +460,16 @@ footer {
 }
 .hero_img .static_img {
   display: block;
-  aspect-ratio: 380/400;
-  width: 40%;
-  height: auto;
+  width: clamp(138px, 15vw, 270px);
+  height: clamp(144px, 17vw, 290px);
   position: absolute;
   bottom: 0;
   left: 0;
   border: 1px solid yellow;
 }
 .hero_img .video img {
-  display: block;
-  aspect-ratio: 608/522;
-  width: 100%;
-  height: auto;
+  width: clamp(310px, 35vw, 600px);
+  height: clamp(270px, 30vw, 522px);
   border-radius: 68% 32% 23% 77%/54% 52% 48% 46%;
 }
 
@@ -499,8 +496,8 @@ footer {
   }
 }
 .banner_section a img {
-  aspect-ratio: 5/1;
-  max-height: 100px;
+  width: clamp(280px, 60vw, 864px);
+  height: clamp(60px, 12vw, 100px);
 }
 
 .about_section {
@@ -597,8 +594,7 @@ footer {
 .about_card .about_card_img img {
   display: block;
   width: 120px;
-  height: auto;
-  aspect-ratio: 1/1;
+  height: 120px;
   position: relative;
   margin-left: auto;
   z-index: 1;
@@ -645,6 +641,7 @@ footer {
   }
   .about_card .about_card_img img {
     width: 140px;
+    height: 140px;
   }
   .about_card .about_card_img::after {
     height: 164px;
@@ -697,14 +694,12 @@ footer {
   flex: 1 1 auto;
   text-align: center;
   padding: 0 2rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 .coaches_item img {
-  display: block;
-  aspect-ratio: 1/1;
-  height: auto;
+  height: 100px;
   width: 100px;
-  margin: 0 auto 1rem auto;
+  margin-bottom: 1rem;
   border-radius: 50% 50% 50% 50%/78% 60% 40% 22%;
 }
 .coaches_item span {
@@ -713,6 +708,12 @@ footer {
 @media (min-width: 1024px) {
   .coaches_item:not(:last-child) {
     border-right: 1px solid rgba(227, 0, 15, 0.1);
+  }
+}
+@media (min-width: 1440px) {
+  .coaches_item img {
+    height: 140px;
+    width: 140px;
   }
 }
 
@@ -764,9 +765,10 @@ footer {
   display: block;
   width: 100%;
   height: auto;
+  min-height: 204px;
   aspect-ratio: 4/3;
-  position: relative;
   border-radius: 10px;
+  position: relative;
   z-index: 1;
 }
 .article .article_img::before {
@@ -800,11 +802,23 @@ footer {
 .article .article_content span {
   color: #E3000F;
 }
-.article:hover .article_img::before {
-  transform: rotate(45deg) scale(1.1);
+@media (min-width: 768px) {
+  .article:hover .article_img::before {
+    transform: rotate(45deg) scale(1.1);
+  }
+  .article:hover .article_img::after {
+    transform: rotate(-45deg) scale(1.1);
+  }
 }
-.article:hover .article_img::after {
-  transform: rotate(-45deg) scale(1.1);
+@media (min-width: 1024px) {
+  .article .article_img img {
+    min-height: 145px;
+  }
+}
+@media (min-width: 1440px) {
+  .article .article_img img {
+    min-height: 204px;
+  }
 }
 
 .partner_section {
@@ -884,23 +898,24 @@ footer {
 
   .hero_section_container {
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
   }
 
   .hero_content {
+    margin-top: 6ch;
     flex: 0.5;
+  }
+  .hero_content h1 {
+    max-width: 30ch;
+  }
+  .hero_content h2 {
+    max-width: 27ch;
   }
 
   .hero_img {
     margin-left: 2rem;
     margin-bottom: 0;
     flex: 0.5;
-  }
-}
-@media (min-width: 1280px) {
-  .banner_section a img {
-    aspect-ratio: 7/1;
   }
 }
 @media (min-width: 1440px) {
@@ -910,6 +925,9 @@ footer {
 
   .hero_img {
     margin-left: 4rem;
+  }
+  .hero_img .static_img {
+    bottom: 1rem;
   }
 
   .banner_section {
@@ -972,15 +990,15 @@ footer {
 
 .article_page_main_img {
   margin-bottom: 2rem;
+  position: relative;
+  padding-top: 56.25%;
 }
 .article_page_main_img img {
-  position: relative;
+  position: absolute;
+  inset: 0;
   z-index: 1;
   width: 100%;
-  margin: 0 auto;
-  height: auto;
-  aspect-ratio: 16/9;
-  display: block;
+  height: 100%;
   border-radius: 20px;
   box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.05);
 }
@@ -1030,9 +1048,6 @@ footer {
     margin: 0 auto;
   }
 
-  .article_page_main_img {
-    position: relative;
-  }
   .article_page_main_img::before {
     content: "";
     position: absolute;
